@@ -12,7 +12,7 @@
 #   "--net <network name>" argument.
 
 # Build steps that apply to all of the selene applications.
-FROM python:3.9 as base-build
+FROM python:3.12.0a3-slim-bullseye as base-build
 RUN apt-get update && apt-get -y install gcc git libsndfile-dev
 RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH ${PATH}:/root/.local/bin
